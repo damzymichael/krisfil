@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #180202;
+  --bg: #fafafa;
+  --pry: #000080;
+  --prylight: #000080cf;
+  --sec: #ada6b9;
+  --seclight: #ada6b9ef;
+  --acc: #a80000;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  @apply font-body bg-bg text-text;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  @apply text-sm;
+}
+
+button {
+  @apply text-sm;
+}
+
+.hero {
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url(./assets/hero-bg.jpg) center;
+  background-size: cover;
+  color: #ada6b9c5;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url(./assets/hero-bg.jpg) center;
+  }
+}
+
+.about-us div {
+  background-image: url('https://www.transparenttextures.com/patterns/cutcube.png');
+}
+
+/* not for about us  */
+.utility {
+  /* background: ; */
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(./assets/showcase_1.jpg), url(./assets/showcase_2.jpg),
+    url(./assets/showcase_3.jpg);
+  background-position: left, center, right;
+  background-repeat: no-repeat;
+  background-size: 30% 100%, auto 100%, 33.3% 100%;
+}
+
+/* MASONRY CSS  */
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /*  gutter size offset */
+}
+
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 10px;
+}
+/* MASONRY CSS  */
+.review-form {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+.no_selector {
+  color: #1802020d;
+}
