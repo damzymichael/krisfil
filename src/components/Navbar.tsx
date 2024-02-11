@@ -1,4 +1,4 @@
-import {useEffect, useReducer, useRef, useState} from 'react';
+import {useEffect, useReducer, useRef} from 'react';
 import logo from '../assets/logo-bg-removed.png';
 import menu from '../assets/menu.svg';
 import close from '../assets/close.svg';
@@ -6,14 +6,20 @@ import Button from './Button';
 
 //Change background color, on scroll
 function Navbar() {
-  const [height, setHeight] = useState(0);
   const [navOpen, toggleNavOpen] = useReducer(state => !state, false);
   const headerRef = useRef<HTMLElement | null>(null);
   useEffect(() => {
-    if (headerRef.current) setHeight(headerRef.current.offsetHeight);
-  }, [height]);
+    function closeNav() {
+      if (navOpen) {
+        toggleNavOpen();
+        document.removeEventListener('click', closeNav);
+      }
+    }
+    if (navOpen) document.addEventListener('click', closeNav);
+    return () => document.removeEventListener('click', closeNav);
+  }, [navOpen]);
   return (
-    <div className='relative'>
+    <div className='relative' onClick={e => e.stopPropagation()}>
       <header
         className={`bg-bg flex justify-between items-center fixed border border-[#ada6b9c5] rounded-3xl  ${
           navOpen ? 'rounded-b-none' : ''
@@ -42,7 +48,7 @@ function Navbar() {
         <img
           src={navOpen ? close : menu}
           alt='menu icon'
-          className='w-8 block sm:hidden'
+          className={'w-8 block sm:hidden ' + (navOpen && 'p-1')}
           onClick={toggleNavOpen}
         />
         <a href='#contact-us' className='hidden sm:block'>
@@ -51,7 +57,7 @@ function Navbar() {
 
         {navOpen && (
           <nav className='bg-bg fixed w-full top-[2.9rem] left-1/2 -translate-x-1/2 z-30 sm:hidden rounded-b-3xl'>
-            <ul className='flex flex-col gap-3 p-4'>
+            <ul className='flex flex-col gap-4 p-4'>
               <li className='hover:text-acc'>
                 <a href='#about-us' onClick={toggleNavOpen}>
                   About

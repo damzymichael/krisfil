@@ -97,7 +97,7 @@ function App() {
         <h1 className='font-heading text-center font-bold text-2xl sm:text-3xl mt-4 mb-7'>
           Get in touch
         </h1>
-        <div className='flex flex-wrap justify-center gap-3 mb-4'>
+        <div className='flex flex-wrap justify-center gap-3 mb-6 sm:mb-4'>
           <div className='bg-bg w-[90%] sm:w-2/5 rounded-lg p-4'>
             <h3 className='font-semibold mb-3 text-2xl'>Phone</h3>
             <a href='tel:+2348068891959' className='hover:underline'>
