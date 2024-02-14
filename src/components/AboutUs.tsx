@@ -5,7 +5,7 @@ function AboutUs() {
   return (
     <section className='about-us min-h-screen flex items-center justify-center' id='about-us'>
       <div
-        className='bg-secLight p-4 w-4/5 mx-auto rounded-lg nimate__animated animate__zoomIn'
+        className='bg-secLight p-4 w-[95%] sm:w-4/5 mx-auto rounded-lg nimate__animated animate__zoomIn'
         ref={textRef}
       >
         <h2 className='text-center mb-3 font-bold font-heading text-xl'>

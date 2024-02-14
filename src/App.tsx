@@ -91,7 +91,7 @@ function App() {
       </section>
 
       <section
-        className='contact-us bg-[#00008033] min-h-[80vh] p-5'
+        className='contact-us bg-[#00008033] min-h-[50vh] p-5'
         id='contact-us'
       >
         <h1 className='font-heading text-center font-bold text-2xl sm:text-3xl mt-4 mb-7'>

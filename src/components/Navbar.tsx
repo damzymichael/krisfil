@@ -56,7 +56,7 @@ function Navbar() {
         </a>
 
         {navOpen && (
-          <nav className='bg-bg fixed w-full top-[2.9rem] left-1/2 -translate-x-1/2 z-30 sm:hidden rounded-b-3xl'>
+          <nav className='bg-bg fixed w-full top-[2.9rem] left-1/2 -translate-x-1/2 z-30 sm:hidden border border-[#ada6b9c5] border-t-0 rounded-b-3xl'>
             <ul className='flex flex-col gap-4 p-4'>
               <li className='hover:text-acc'>
                 <a href='#about-us' onClick={toggleNavOpen}>

@@ -22,10 +22,6 @@ body {
   overflow-x: hidden;
 }
 
-* {
-  @apply text-sm;
-}
-
 button {
   @apply text-sm;
 }
