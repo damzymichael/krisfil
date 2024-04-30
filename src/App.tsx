@@ -336,7 +336,10 @@ function App() {
           </div>
         </section>
         <footer className='-m-3 h-32 bg-[#2f2f2f] flex items-center justify-center text-white'>
-          <p>© 2024 Krisfil Koutures. All rights reserved</p>
+          <p>
+            &copy; {new Date().getFullYear()} Krisfil Koutures. All rights
+            reserved
+          </p>
         </footer>
       </main>
     </>
