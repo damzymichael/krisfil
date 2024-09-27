@@ -1,13 +1,10 @@
 import {useEffect, useRef} from 'react';
-import {
-  ArrowRightIcon,
-  ArrowRightLong,
-  BrownStar,
-  WhiteStarIcon
-} from '../components/SVGs';
-import girl_on_red from '../assets/girl-on-red.jpeg';
-import girl_with_bag from '../assets/girl-with-bags.jpeg';
+import {ArrowRightIcon, ArrowRightLong, BrownStar} from '../components/SVGs';
+import {WhiteStarIcon} from '../components/SVGs';
 import half_girl from '../assets/half-girl.jpeg';
+import blue_gown from '../assets/showcase_8.jpg';
+import bridal_gown from '../assets/bridal_gown.jpeg'
+
 
 const Hero = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
@@ -51,21 +48,18 @@ const Hero = () => {
       </p>
       <div className='flex w-full sm:w-3/5 gap-2 mx-auto mb-4'>
         <img
-          src={girl_on_red}
-          alt=''
+          src={blue_gown}
           className='w-2/5 h-[20rem] object-cover rounded-2xl'
           data-aos='fade-down-right'
         />
         <div className='flex flex-col gap-2 flex-grow'>
           <img
-            src={girl_with_bag}
-            alt=''
-            className='h-[156px] object-cover rounded-2xl'
+            src={bridal_gown}
+            className='h-[156px] object-cover object-top rounded-2xl'
             data-aos='fade-down-left'
           />
           <img
             src={half_girl}
-            alt=''
             className='h-[156px] object-cover rounded-2xl animate__animated animate__fadeInRight animate_duration_1s'
             data-aos='fade-up-left'
           />

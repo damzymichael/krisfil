@@ -1,30 +1,19 @@
 import {useEffect} from 'react';
-import {
-  ArrowRightLong,
-  BlueCurveIcon,
-  BrownCurveIcon,
-  FrenchCurve,
-  ArrowDiagonal,
-  ReviewWhite,
-  WaveIcon,
-  PhoneIcon,
-  Available,
-  Instagram,
-  Mail,
-  Location,
-  Whatsapp
-} from './components/SVGs';
-import {ArrowRightIcon} from './components/SVGs';
+import {BlueCurveIcon, BrownCurveIcon, FrenchCurve} from './components/SVGs';
+import {ReviewWhite, WaveIcon, PhoneIcon} from './components/SVGs';
+import {Instagram, Mail, Location, Whatsapp} from './components/SVGs';
+import {ArrowRightIcon, ArrowDiagonal, Available} from './components/SVGs';
+import {ArrowRightLong} from './components/SVGs';
 import Nav from './components/Nav';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Hero from './components/Hero';
-import lady_sitting from './assets/lady_sitting.jpeg';
 import {ourServices} from './data';
 import Service from './components/Service';
 import Gallery from './components/Gallery';
-import half_girl from './assets/half-girl.jpeg';
 import Testimonials from './components/Testimonials';
+import elegant_gown from './assets/showcase_1.jpg';
+import Training from './components/Training';
 
 //Add active links and whatsapp Links
 //Mobile nav
@@ -81,7 +70,7 @@ function App() {
           </h1>
           <div className='flex flex-col sm:flex-row justify-center items-center gap-5'>
             <img
-              src={lady_sitting}
+              src={elegant_gown}
               alt='Fashionista lady'
               className='w-full sm:w-[45%] aspect-video object-top object-cover rounded-2xl'
             />
@@ -116,13 +105,13 @@ function App() {
         </section>
 
         <section id='training-offer' className='relative mb-20'>
-          {/* <svg
+          <svg
             width='1728'
             height='1131'
             viewBox='0 0 1728 1131'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
-            className='absolute -left-10 w-full -z-10'
+            className='absolute opacity-50 -left-10 w-full -z-10'
           >
             <path
               d='M-69.4009 646.303C-107.894 545.794 -174.384 451.44 -167.505 339.727C-163.594 276.204 -154.89 204.08 -135.234 143.195C-120.587 97.8245 -78.3557 78.4884 -37.4524 60.9039C103.458 0.325378 260.007 14.0095 375.942 120.283C439.044 178.127 475.915 258.544 515.999 332.627C555.801 406.191 595.07 479.503 644.115 547.553C708.82 637.332 833.714 720.034 938.751 647.594C1004.32 602.375 1045.67 548.774 1132.7 557.235C1278.04 571.365 1353.89 750.961 1417.66 856.711C1485.08 968.515 1553.92 1105.2 1699.06 1105.2C1727.59 1105.2 1754.53 1099.39 1783.61 1099.39'
@@ -130,7 +119,7 @@ function App() {
               strokeWidth='50'
               strokeLinecap='round'
             />
-          </svg> */}
+          </svg>
           <header className='text-center mb-5'>
             <h1 className='font-bold text-4xl sm:text-5xl mb-2'>
               Training offers
@@ -149,86 +138,9 @@ function App() {
           </div>
 
           <div className='my-10 flex flex-wrap gap-3 sm:px-8 justify-around'>
-            <div className='w-full sm:w-[45%] md:w-[30%] h-[400px] relative p-4 rounded-3xl text-white overflow-hidden bg-dark-overlay flex flex-col justify-end'>
-              <img
-                src={half_girl}
-                alt='Banner'
-                className='absolute w-full h-full -m-4 -z-10 object-cover'
-              />
-              <div className='font-bold'>
-                <h1 className='text-2xl mb-3'>Basic Training Class</h1>
-                <h2 className='text-4xl'>1 month</h2>
-              </div>
-              <button className='bg-[#b9987c] py-4 rounded-full mt-3 flex gap-2 items-center justify-center'>
-                <span>Apply now</span>
-                <svg
-                  width='53'
-                  height='16'
-                  viewBox='0 0 53 16'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    d='M52.7071 8.70711C53.0976 8.31658 53.0976 7.68342 52.7071 7.29289L46.3431 0.928932C45.9526 0.538408 45.3195 0.538408 44.9289 0.928932C44.5384 1.31946 44.5384 1.95262 44.9289 2.34315L50.5858 8L44.9289 13.6569C44.5384 14.0474 44.5384 14.6805 44.9289 15.0711C45.3195 15.4616 45.9526 15.4616 46.3431 15.0711L52.7071 8.70711ZM0 9H52V7H0V9Z'
-                    fill='white'
-                  />
-                </svg>
-              </button>
-            </div>
-
-            <div className='w-full sm:w-[45%] md:w-[30%] h-[400px] relative p-4 rounded-3xl text-white overflow-hidden bg-dark-overlay flex flex-col justify-end'>
-              <img
-                src={half_girl}
-                alt='Banner'
-                className='absolute w-full h-full -m-4 -z-10 object-cover'
-              />
-              <div className='font-bold'>
-                <h1 className='text-2xl mb-3'>Basic Training Class</h1>
-                <h2 className='text-4xl'>1 month</h2>
-              </div>
-              <button className='bg-[#b9987c] py-4 rounded-full mt-3 flex gap-2 items-center justify-center'>
-                <span>Apply now</span>
-                <svg
-                  width='53'
-                  height='16'
-                  viewBox='0 0 53 16'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    d='M52.7071 8.70711C53.0976 8.31658 53.0976 7.68342 52.7071 7.29289L46.3431 0.928932C45.9526 0.538408 45.3195 0.538408 44.9289 0.928932C44.5384 1.31946 44.5384 1.95262 44.9289 2.34315L50.5858 8L44.9289 13.6569C44.5384 14.0474 44.5384 14.6805 44.9289 15.0711C45.3195 15.4616 45.9526 15.4616 46.3431 15.0711L52.7071 8.70711ZM0 9H52V7H0V9Z'
-                    fill='white'
-                  />
-                </svg>
-              </button>
-            </div>
-
-            <div className='w-full sm:w-[45%] md:w-[30%] h-[400px] relative p-4 rounded-3xl text-white overflow-hidden bg-dark-overlay flex flex-col justify-end'>
-              <img
-                src={half_girl}
-                alt='Banner'
-                className='absolute w-full h-full -m-4 -z-10 object-cover'
-              />
-              <div className='font-bold'>
-                <h1 className='text-2xl mb-3'>Basic Training Class</h1>
-                <h2 className='text-4xl'>1 month</h2>
-              </div>
-              <button className='bg-[#b9987c] py-4 rounded-full mt-3 flex gap-2 items-center justify-center'>
-                <span>Apply now</span>
-                <svg
-                  width='53'
-                  height='16'
-                  viewBox='0 0 53 16'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    d='M52.7071 8.70711C53.0976 8.31658 53.0976 7.68342 52.7071 7.29289L46.3431 0.928932C45.9526 0.538408 45.3195 0.538408 44.9289 0.928932C44.5384 1.31946 44.5384 1.95262 44.9289 2.34315L50.5858 8L44.9289 13.6569C44.5384 14.0474 44.5384 14.6805 44.9289 15.0711C45.3195 15.4616 45.9526 15.4616 46.3431 15.0711L52.7071 8.70711ZM0 9H52V7H0V9Z'
-                    fill='white'
-                  />
-                </svg>
-              </button>
-            </div>
+            <Training />
+            <Training />
+            <Training />
           </div>
         </section>
 
@@ -296,6 +208,7 @@ function App() {
           <div className='flex flex-col sm:flex-row flex-wrap justify-center gap-2 mx-auto w-full sm:w-11/12 md:w-10/12'>
             <a
               href='tel+2348068891959'
+              target='_blank'
               className='flex gap-1 items-center hover:underline w-full sm:w-[32%]'
             >
               <PhoneIcon />
@@ -306,7 +219,8 @@ function App() {
               <span>Mon - Fri: 9am - 5pm</span>
             </p>
             <a
-              href='https://www.instagram.com'
+              href='https://www.instagram.com/krisfil_kouture_et_al_?utm_source=qr&igsh=MzNlNGNkZWQ4Mg%3D%3D'
+              target='_blank'
               className='flex gap-1 items-center hover:underline w-full sm:w-[32%]'
             >
               <Instagram />
@@ -314,6 +228,7 @@ function App() {
             </a>
             <a
               href='mailto:krisfilkouture@gmail.com'
+              target='_blank'
               className='flex gap-1 items-center hover:underline w-full sm:w-[32%]'
             >
               <Mail />
@@ -321,13 +236,15 @@ function App() {
             </a>
             <a
               href=''
+              target='_blank'
               className='flex gap-1 items-center hover:underline w-full sm:w-[32%]'
             >
               <Location />
               <span>Aule Estate, Akure, Ondo State</span>
             </a>
             <a
-              href=''
+              href='https://wa.me/+2348068891959'
+              target='_blank'
               className='flex gap-1 items-center hover:underline w-full sm:w-[32%]'
             >
               <Whatsapp />
