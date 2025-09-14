@@ -2,7 +2,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import {Pagination, Mousewheel, Keyboard} from 'swiper/modules';
+import {Pagination} from 'swiper/modules';
 import {Autoplay} from 'swiper/modules';
 import bridal_gown from '../assets/bridal_gown.jpeg';
 
@@ -13,7 +13,7 @@ const Gallery = () => {
     <Swiper
       className='min-h-[500px] bg-[#2f2f2f] mx-auto rounded-3xl flex items-center justify-center p-5 md:p-0'
       autoplay
-      modules={[Pagination, Mousewheel, Keyboard, Autoplay]}
+      modules={[Pagination, Autoplay]}
       loop
       cssMode={true}
       pagination={{clickable: true}}

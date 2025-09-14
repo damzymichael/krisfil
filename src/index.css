@@ -46,6 +46,19 @@ body {
   background-position: center;
 }
 
+/* Embla styling  */
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
 /* button {
   @apply text-sm;
 }
